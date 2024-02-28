@@ -1,4 +1,4 @@
-package com.Geor.activityApi.config;
+package com.Geor.ActivityApi.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

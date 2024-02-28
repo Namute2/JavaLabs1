@@ -1,4 +1,4 @@
-package com.Geor.activityApi.model;
+package com.Geor.ActivityApi.model;
 
 import lombok.*;
 

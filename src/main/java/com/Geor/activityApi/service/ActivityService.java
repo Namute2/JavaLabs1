@@ -1,4 +1,4 @@
-package com.Geor.activityApi.service;
+package com.Geor.ActivityApi.service;
 
 
 import lombok.AllArgsConstructor;

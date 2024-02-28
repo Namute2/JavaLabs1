@@ -1,7 +1,7 @@
-package com.Geor.activityApi.controller;
+package com.Geor.ActivityApi.controller;
 
 
-import com.Geor.activityApi.service.ActivityService;
+import com.Geor.ActivityApi.service.ActivityService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

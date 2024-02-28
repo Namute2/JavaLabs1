@@ -1,4 +1,4 @@
-package com.Geor.activityApi;
+package com.Geor.ActivityApi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
