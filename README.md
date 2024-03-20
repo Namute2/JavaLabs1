@@ -3,9 +3,9 @@
 ____
 Данный проект создан с целью помочь найти занятие тем, кто не знает чем занять свободное время.
 
-## Ссылка на анализатор к ода
+## Ссылка на анализатор кода
 
-[Sonar Cloud](https://sonarcloud.io/summary/new_code?id=egerin11_laba_Java)
+[Sonar Cloud](https://sonarcloud.io/summary/new_code?id=Namute2_JavaLabs1)
 
 ## Задачи сервиса
 
