@@ -1,13 +1,10 @@
 package com.georg.boredapi.service;
 
 
-import com.georg.boredapi.entity.Activity;
 import com.georg.boredapi.entity.SourceLink;
-import com.georg.boredapi.repository.ActivityRepository;
 import com.georg.boredapi.repository.SourceRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.Optional;
@@ -42,7 +39,9 @@ public class SourceService {
 
     public SourceLink deleteSourceLinkById(Long id) {
         SourceLink sourceLink = sourceRepository.findById(id).orElse(null);
-        sourceRepository.delete(sourceLink);
+        if (sourceLink  != null){
+            sourceRepository.delete(sourceLink);
+        }
         return sourceLink;
     }
 }

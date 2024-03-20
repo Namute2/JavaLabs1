@@ -6,7 +6,6 @@ import com.georg.boredapi.entity.SourceLink;
 import com.georg.boredapi.repository.ActivityRepository;
 import com.georg.boredapi.repository.SourceRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
