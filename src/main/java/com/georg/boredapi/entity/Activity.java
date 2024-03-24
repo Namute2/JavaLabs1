@@ -4,13 +4,15 @@ import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class Activity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String activName;
+    private String name;
+
 
 
     @OneToMany(mappedBy = "activity")
@@ -20,9 +22,22 @@ public class Activity {
     public Activity() {
     }
 
-    public Activity(Long id, String activName) {
+    public Activity(Long id, String name) {
         this.id = id;
-        this.activName = activName;
+        this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Activity activity = (Activity) o;
+        return name.equals(activity.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 
     public Long getId() {
@@ -33,12 +48,12 @@ public class Activity {
         this.id = id;
     }
 
-    public String getActivName() {
-        return activName;
+    public String getName() {
+        return name;
     }
 
-    public void setActivName(String activName) {
-        this.activName = activName;
+    public void setName(String activName) {
+        this.name = activName;
     }
 
     public List<SourceLink> getSourceList() {

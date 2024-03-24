@@ -1,6 +1,7 @@
 package com.georg.boredapi.service;
 
 
+import com.georg.boredapi.cache.MyCache;
 import com.georg.boredapi.entity.Activity;
 import com.georg.boredapi.entity.SourceLink;
 import com.georg.boredapi.repository.ActivityRepository;
@@ -16,6 +17,8 @@ import java.util.Optional;
 @AllArgsConstructor
 public class ActivityService {
 
+
+    private final MyCache <Long, Activity> cache = new MyCache<>(5);
     private static String urlApi = "https://www.boredapi.com/api/{action}";
     private final RestTemplate restTemplate;
     private final ActivityRepository activityRepository;
@@ -40,15 +43,21 @@ public class ActivityService {
     }
 
     public Activity getActivityById(Long id) {
-        Optional<Activity> activityOptional = activityRepository.findById(id);
-        return activityOptional.orElse(null);
+        Activity activity = cache.get(id);
+        if (activity == null) {
+            activity = activityRepository.findById(id).orElse(null  );
+            if (activity != null) {
+                cache.put(id, activity);
+            }
+        }
+        return activity;
     }
 
     public Activity updateActivity(Activity updatedActivity) {
         Optional<Activity> existingActivityOptional = activityRepository.findById(updatedActivity.getId());
         if (existingActivityOptional.isPresent()) {
             Activity existingActivity = existingActivityOptional.get();
-            existingActivity.setActivName(updatedActivity.getActivName());
+            existingActivity.setName(updatedActivity.getName());
             return activityRepository.save(existingActivity);
         }
         return null;
@@ -56,5 +65,13 @@ public class ActivityService {
 
     public void deleteActivityById(Long id) {
         activityRepository.deleteById(id);
+        cache.remove(id);
     }
+
+    public List<Activity> getActivitiesBySourceLink(String sourceLink) {
+        return activityRepository.findBySourceLink(sourceLink);
+    }
+
+
+
 }

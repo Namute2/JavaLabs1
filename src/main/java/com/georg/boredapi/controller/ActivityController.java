@@ -56,4 +56,9 @@ public class ActivityController {
         activityService.deleteActivityById(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/link")
+    public List<Activity> getActivitiesBySourceLink(@RequestParam("sourceLink") String sourceLink) {
+        return activityService.getActivitiesBySourceLink(sourceLink);
+    }
 }
