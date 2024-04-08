@@ -1,0 +1,87 @@
+2024-04-08 00:04:00.795  INFO 10156 --- [           main] c.georg.boredapi.ActivityApiApplication  : Starting ActivityApiApplication using Java 21.0.2 with PID 10156 (D:\JavaLabs\activityApi\target\classes started by nikge in D:\JavaLabs\activityApi)
+2024-04-08 00:04:00.797  INFO 10156 --- [           main] c.georg.boredapi.ActivityApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-04-08 00:04:01.403  INFO 10156 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-08 00:04:01.446  INFO 10156 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2024-04-08 00:04:01.936  INFO 10156 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-08 00:04:01.944  INFO 10156 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-08 00:04:01.944  INFO 10156 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-08 00:04:01.998  INFO 10156 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-08 00:04:01.999  INFO 10156 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1161 ms
+2024-04-08 00:04:02.112  INFO 10156 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-08 00:04:02.145  INFO 10156 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-08 00:04:02.171  INFO 10156 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-08 00:04:02.308  INFO 10156 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-08 00:04:02.324  INFO 10156 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-08 00:04:02.546  INFO 10156 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71039ce1
+2024-04-08 00:04:02.548  INFO 10156 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-08 00:04:03.173  INFO 10156 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-08 00:04:03.228  INFO 10156 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-08 00:04:03.480  INFO 10156 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-08 00:04:04.088  WARN 10156 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-08 00:04:04.516  INFO 10156 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-08 00:04:04.522  INFO 10156 --- [           main] c.georg.boredapi.ActivityApiApplication  : Started ActivityApiApplication in 4.06 seconds (process running for 4.523)
+2024-04-08 00:04:42.338  INFO 10156 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-08 00:04:42.338  INFO 10156 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08 00:04:42.339  INFO 10156 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-04-08 00:04:42.359  INFO 10156 --- [nio-8080-exec-1] com.georg.boredapi.aop.LoggerAspect      : Entering service method: ActivityService.getActivity
+2024-04-08 00:04:42.432  INFO 10156 --- [nio-8080-exec-1] com.georg.boredapi.aop.LoggerAspect      : Exiting service method: ActivityService.getActivity
+2024-04-08 00:04:57.165 ERROR 10156 --- [nio-8080-exec-3] c.g.b.exception.ExceptionsHandler        : ERROR, 500 CODE
+2024-04-08 00:05:02.061 ERROR 10156 --- [nio-8080-exec-5] c.g.b.exception.ExceptionsHandler        : ERROR, 400 CODE
+2024-04-08 00:07:24.961  INFO 10156 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-08 00:07:24.962  INFO 10156 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-08 00:07:24.968  INFO 10156 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-08 09:13:02.129  INFO 27288 --- [           main] c.georg.boredapi.ActivityApiApplication  : Starting ActivityApiApplication using Java 21.0.2 with PID 27288 (D:\JavaLabs\activityApi\target\classes started by nikge in D:\JavaLabs\activityApi)
+2024-04-08 09:13:02.132  INFO 27288 --- [           main] c.georg.boredapi.ActivityApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-04-08 09:13:03.260  INFO 27288 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-08 09:13:03.340  INFO 27288 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 2 JPA repository interfaces.
+2024-04-08 09:13:04.262  INFO 27288 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-08 09:13:04.279  INFO 27288 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-08 09:13:04.279  INFO 27288 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-08 09:13:04.390  INFO 27288 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-08 09:13:04.390  INFO 27288 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2192 ms
+2024-04-08 09:13:04.627  INFO 27288 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-08 09:13:04.704  INFO 27288 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-08 09:13:04.754  INFO 27288 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-08 09:13:05.051  INFO 27288 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-08 09:13:05.083  INFO 27288 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-08 09:13:05.592  INFO 27288 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1bfa3893
+2024-04-08 09:13:05.594  INFO 27288 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-08 09:13:06.759  INFO 27288 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-08 09:13:06.854  INFO 27288 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-08 09:13:07.360  INFO 27288 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-08 09:13:08.317  WARN 27288 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-08 09:13:09.193  INFO 27288 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-08 09:13:09.207  INFO 27288 --- [           main] c.georg.boredapi.ActivityApiApplication  : Started ActivityApiApplication in 7.701 seconds (process running for 8.728)
+2024-04-08 09:13:14.040  INFO 27288 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-08 09:13:14.041  INFO 27288 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08 09:13:14.043  INFO 27288 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-04-08 09:13:14.175 ERROR 27288 --- [nio-8080-exec-1] c.g.b.exception.ExceptionsHandler        : ERROR, 400 CODE
+2024-04-08 09:13:30.150 ERROR 27288 --- [nio-8080-exec-3] c.g.b.exception.ExceptionsHandler        : ERROR, 500 CODE
+2024-04-08 09:15:09.792  INFO 27288 --- [nio-8080-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 399 ms
+2024-04-08 09:24:45.328  WARN 27288 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s470ms697µs800ns).
+2024-04-08 09:38:00.654  WARN 27288 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m15s162ms323µs100ns).
+2024-04-08 09:44:13.136  INFO 27288 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-08 09:44:13.140  INFO 27288 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-08 09:44:13.150  INFO 27288 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-08 09:44:21.218  INFO 7192 --- [           main] c.georg.boredapi.ActivityApiApplication  : Starting ActivityApiApplication using Java 21.0.2 with PID 7192 (D:\JavaLabs\activityApi\target\classes started by nikge in D:\JavaLabs\activityApi)
+2024-04-08 09:44:21.221  INFO 7192 --- [           main] c.georg.boredapi.ActivityApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-04-08 09:44:22.202  INFO 7192 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-08 09:44:22.278  INFO 7192 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+2024-04-08 09:44:23.145  INFO 7192 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-08 09:44:23.246  INFO 7192 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1970 ms
+2024-04-08 09:44:23.475  INFO 7192 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-08 09:44:23.552  INFO 7192 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-08 09:44:23.601  INFO 7192 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-08 09:44:23.870  INFO 7192 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-08 09:44:23.902  INFO 7192 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-08 09:44:24.352  INFO 7192 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4dd1d2bb
+2024-04-08 09:44:24.356  INFO 7192 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-08 09:44:25.514  INFO 7192 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-08 09:44:25.611  INFO 7192 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-08 09:44:26.215  INFO 7192 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-08 09:44:27.213  WARN 7192 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-08 09:44:28.067  INFO 7192 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-08 09:44:28.082  INFO 7192 --- [           main] c.georg.boredapi.ActivityApiApplication  : Started ActivityApiApplication in 7.438 seconds (process running for 8.135)
+2024-04-08 09:44:28.099  INFO 7192 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-08 09:44:28.101  INFO 7192 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-08 09:44:28.114  INFO 7192 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
