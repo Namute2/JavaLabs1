@@ -44,12 +44,12 @@ class ActivityServiceTest {
         String expectedUrl = "https://www.boredapi.com/api/test";
         String expectedResult = "Some result";
 
-        when(restTemplate.getForObject(eq(expectedUrl), eq(String.class))).thenReturn(expectedResult);
+        when(restTemplate.getForObject((expectedUrl), (String.class))).thenReturn(expectedResult);
 
         String result = activityService.getInf(action);
 
         assertEquals(expectedResult, result);
-        verify(restTemplate, times(1)).getForObject(eq(expectedUrl), eq(String.class));
+        verify(restTemplate, times(1)).getForObject((expectedUrl), (String.class));
     }
 
     @Test
@@ -57,12 +57,12 @@ class ActivityServiceTest {
         Activity activity = new Activity();
         activity.setSourceList(Collections.emptyList());
 
-        when(activityRepository.save(eq(activity))).thenReturn(activity);
+        when(activityRepository.save((activity))).thenReturn(activity);
 
         Activity result = activityService.addActivity(activity);
 
         assertEquals(activity, result);
-        verify(activityRepository, times(1)).save(eq(activity));
+        verify(activityRepository, times(1)).save((activity));
         verify(sourceRepository, never()).save(any());
     }
 
@@ -83,12 +83,12 @@ class ActivityServiceTest {
         Long id = 1L;
         Activity expectedActivity = new Activity();
 
-        when(activityRepository.findById(eq(id))).thenReturn(Optional.of(expectedActivity));
+        when(activityRepository.findById((id))).thenReturn(Optional.of(expectedActivity));
 
         Activity result = activityService.getActivityById(id);
 
         assertEquals(expectedActivity, result);
-        verify(activityRepository, times(1)).findById(eq(id));
+        verify(activityRepository, times(1)).findById((id));
     }
 
     @Test
@@ -100,15 +100,15 @@ class ActivityServiceTest {
         Activity existingActivity = new Activity();
         existingActivity.setId(id);
 
-        when(activityRepository.findById(eq(id))).thenReturn(Optional.of(existingActivity));
-        when(activityRepository.save(eq(existingActivity))).thenReturn(existingActivity);
+        when(activityRepository.findById((id))).thenReturn(Optional.of(existingActivity));
+        when(activityRepository.save((existingActivity))).thenReturn(existingActivity);
 
         Activity result = activityService.updateActivity(updatedActivity);
 
         assertEquals(existingActivity, result);
         assertEquals(updatedActivity.getName(), existingActivity.getName());
-        verify(activityRepository, times(1)).findById(eq(id));
-        verify(activityRepository, times(1)).save(eq(existingActivity));
+        verify(activityRepository, times(1)).findById((id));
+        verify(activityRepository, times(1)).save((existingActivity));
     }
 
     @Test
@@ -117,12 +117,12 @@ class ActivityServiceTest {
         Activity updatedActivity = new Activity();
         updatedActivity.setId(id);
 
-        when(activityRepository.findById(eq(id))).thenReturn(Optional.empty());
+        when(activityRepository.findById((id))).thenReturn(Optional.empty());
 
         Activity result = activityService.updateActivity(updatedActivity);
 
         assertEquals(null, result);
-        verify(activityRepository, times(1)).findById(eq(id));
+        verify(activityRepository, times(1)).findById((id));
         verify(activityRepository, never()).save(any());
     }
 
@@ -131,12 +131,12 @@ class ActivityServiceTest {
         String sourceLink = "http://example.com";
         List<Activity> expectedActivities = Collections.singletonList(new Activity());
 
-        when(activityRepository.findBySourceLink(eq(sourceLink))).thenReturn(expectedActivities);
+        when(activityRepository.findBySourceLink((sourceLink))).thenReturn(expectedActivities);
 
         List<Activity> result = activityService.getActivitiesBySourceLink(sourceLink);
 
         assertEquals(expectedActivities, result);
-        verify(activityRepository, times(1)).findBySourceLink(eq(sourceLink));
+        verify(activityRepository, times(1)).findBySourceLink((sourceLink));
     }
 
 }

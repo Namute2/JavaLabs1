@@ -62,8 +62,8 @@ class TestActivity {
         assertEquals(activity3, activity1);
         assertNotEquals(activity1, activity2);
         assertNotEquals(activity2, activity1);
-        assertNotEquals(activity1, null);
-        assertNotEquals(activity1, "Test Activity");
+        assertNotEquals(null, activity1);
+        assertNotEquals("Test Activity", activity1);
     }
 
     @Test

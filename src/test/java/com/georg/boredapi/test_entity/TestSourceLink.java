@@ -60,8 +60,8 @@ class TestSourceLink {
         assertEquals(sourceLink2, sourceLink1);
         assertNotEquals(sourceLink1, sourceLink3);
         assertNotEquals(sourceLink3, sourceLink1);
-        assertNotEquals(sourceLink1, null);
-        assertNotEquals(sourceLink1, "https://example.com");
+        assertNotEquals(null, sourceLink1);
+        assertNotEquals("https://example.com", sourceLink1);
     }
 
     @Test

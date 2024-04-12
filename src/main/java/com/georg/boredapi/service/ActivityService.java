@@ -116,6 +116,6 @@ public class ActivityService {
   public List<Activity> performBulkActivityOperation(List<Activity> activities) {
     return activities.stream()
             .map(this::addActivity)
-            .collect(Collectors.toList());
+            .toList();
   }
 }

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class TestMyCache {
+class TestMyCache {
 
     private MyCache<String, Integer> cache;
 
@@ -15,7 +15,7 @@ public class TestMyCache {
     }
 
     @Test
-    public void testPutAndGet() {
+    void testPutAndGet() {
         cache.put("key1", 1);
         cache.put("key2", 2);
         cache.put("key3", 3);
@@ -26,12 +26,12 @@ public class TestMyCache {
     }
 
     @Test
-    public void testGetNonExistentKey() {
+    void testGetNonExistentKey() {
         Assertions.assertNull(cache.get("nonexistent"));
     }
 
     @Test
-    public void testRemove() {
+    void testRemove() {
         cache.put("key1", 1);
         cache.remove("key1");
 
@@ -39,7 +39,7 @@ public class TestMyCache {
     }
 
     @Test
-    public void testClear() {
+    void testClear() {
         cache.put("key1", 1);
         cache.put("key2", 2);
         cache.clear();

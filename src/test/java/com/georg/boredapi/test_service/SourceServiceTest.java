@@ -47,36 +47,36 @@ class SourceServiceTest {
         Long id = 1L;
         SourceLink expectedSourceLink = new SourceLink();
 
-        when(sourceRepository.findById(eq(id))).thenReturn(Optional.of(expectedSourceLink));
+        when(sourceRepository.findById((id))).thenReturn(Optional.of(expectedSourceLink));
 
         SourceLink result = sourceService.getSourceLinkById(id);
 
         assertEquals(expectedSourceLink, result);
-        verify(sourceRepository, times(1)).findById(eq(id));
+        verify(sourceRepository, times(1)).findById((id));
     }
 
     @Test
     void testGetSourceLinkByIdNonExisting() {
         Long id = 1L;
 
-        when(sourceRepository.findById(eq(id))).thenReturn(Optional.empty());
+        when(sourceRepository.findById((id))).thenReturn(Optional.empty());
 
         SourceLink result = sourceService.getSourceLinkById(id);
 
         assertEquals(null, result);
-        verify(sourceRepository, times(1)).findById(eq(id));
+        verify(sourceRepository, times(1)).findById((id));
     }
 
     @Test
     void testAddSourceLink() {
         SourceLink sourceLink = new SourceLink();
 
-        when(sourceRepository.save(eq(sourceLink))).thenReturn(sourceLink);
+        when(sourceRepository.save((sourceLink))).thenReturn(sourceLink);
 
         SourceLink result = sourceService.addSourceLink(sourceLink);
 
         assertEquals(sourceLink, result);
-        verify(sourceRepository, times(1)).save(eq(sourceLink));
+        verify(sourceRepository, times(1)).save((sourceLink));
     }
 
     @Test
@@ -88,15 +88,15 @@ class SourceServiceTest {
         SourceLink existingSourceLink = new SourceLink();
         existingSourceLink.setId(id);
 
-        when(sourceRepository.findById(eq(id))).thenReturn(Optional.of(existingSourceLink));
-        when(sourceRepository.save(eq(existingSourceLink))).thenReturn(existingSourceLink);
+        when(sourceRepository.findById((id))).thenReturn(Optional.of(existingSourceLink));
+        when(sourceRepository.save((existingSourceLink))).thenReturn(existingSourceLink);
 
         SourceLink result = sourceService.updateSourceLink(updatedSourceLink);
 
         assertEquals(existingSourceLink, result);
         assertEquals(updatedSourceLink.getLink(), existingSourceLink.getLink());
-        verify(sourceRepository, times(1)).findById(eq(id));
-        verify(sourceRepository, times(1)).save(eq(existingSourceLink));
+        verify(sourceRepository, times(1)).findById((id));
+        verify(sourceRepository, times(1)).save((existingSourceLink));
     }
 
     @Test
@@ -105,12 +105,12 @@ class SourceServiceTest {
         SourceLink updatedSourceLink = new SourceLink();
         updatedSourceLink.setId(id);
 
-        when(sourceRepository.findById(eq(id))).thenReturn(Optional.empty());
+        when(sourceRepository.findById((id))).thenReturn(Optional.empty());
 
         SourceLink result = sourceService.updateSourceLink(updatedSourceLink);
 
         assertEquals(null, result);
-        verify(sourceRepository, times(1)).findById(eq(id));
+        verify(sourceRepository, times(1)).findById((id));
         verify(sourceRepository, never()).save(any());
     }
 
@@ -120,25 +120,25 @@ class SourceServiceTest {
         SourceLink sourceLink = new SourceLink();
         sourceLink.setId(id);
 
-        when(sourceRepository.findById(eq(id))).thenReturn(Optional.of(sourceLink));
+        when(sourceRepository.findById((id))).thenReturn(Optional.of(sourceLink));
 
         SourceLink result = sourceService.deleteSourceLinkById(id);
 
         assertEquals(sourceLink, result);
-        verify(sourceRepository, times(1)).findById(eq(id));
-        verify(sourceRepository, times(1)).delete(eq(sourceLink));
+        verify(sourceRepository, times(1)).findById((id));
+        verify(sourceRepository, times(1)).delete((sourceLink));
     }
 
     @Test
     void testDeleteSourceLinkByIdNonExisting() {
         Long id = 1L;
 
-        when(sourceRepository.findById(eq(id))).thenReturn(Optional.empty());
+        when(sourceRepository.findById((id))).thenReturn(Optional.empty());
 
         SourceLink result = sourceService.deleteSourceLinkById(id);
 
         assertEquals(null, result);
-        verify(sourceRepository, times(1)).findById(eq(id));
+        verify(sourceRepository, times(1)).findById((id));
         verify(sourceRepository, never()).delete(any());
     }
 }
