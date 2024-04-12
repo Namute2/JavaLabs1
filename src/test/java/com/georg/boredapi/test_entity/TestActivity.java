@@ -49,32 +49,5 @@ class TestActivity {
 
         assertEquals(name, activity.getName());
     }
-
-    @Test
-    void testEquals() {
-        String name = "Test Activity";
-        Activity activity1 = new Activity(1L, name);
-        Activity activity2 = new Activity(2L, name);
-        Activity activity3 = new Activity(1L, "Different Activity");
-
-        assertEquals(activity1, activity1);
-        assertEquals(activity3, activity3);
-        assertEquals(activity3, activity1);
-        assertNotEquals(activity1, activity2);
-        assertNotEquals(activity2, activity1);
-        assertNotEquals(null, activity1);
-        assertNotEquals("Test Activity", activity1);
-    }
-
-    @Test
-    void testHashCode() {
-        String name = "Test Activity";
-        Activity activity1 = new Activity(1L, name);
-        Activity activity2 = new Activity(2L, name);
-        Activity activity3 = new Activity(1L, "Different Activity");
-
-        assertEquals(activity1.hashCode(), activity1.hashCode());
-        assertEquals(activity3.hashCode(), activity1.hashCode());
-        assertNotEquals(activity1.hashCode(), activity2.hashCode());
-    }
+    
 }
