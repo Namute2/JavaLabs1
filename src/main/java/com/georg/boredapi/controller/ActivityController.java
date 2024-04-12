@@ -2,7 +2,6 @@ package com.georg.boredapi.controller;
 
 import com.georg.boredapi.entity.Activity;
 import com.georg.boredapi.service.ActivityService;
-import jakarta.validation.constraints.NotNull;
 import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -65,7 +64,7 @@ public class ActivityController {
    * @return the response entity
    */
   @PostMapping
-  public ResponseEntity<Activity> addActivity(@NotNull @RequestBody Activity activity) {
+  public ResponseEntity<Activity> addActivity(@RequestBody Activity activity) {
     Activity savedActivity = activityService.addActivity(activity);
     return ResponseEntity.status(HttpStatus.CREATED).body(savedActivity);
   }
@@ -110,5 +109,11 @@ public class ActivityController {
   @GetMapping("/link")
   public List<Activity> getActivitiesBySourceLink(@RequestParam("sourceLink") String sourceLink) {
     return activityService.getActivitiesBySourceLink(sourceLink);
+  }
+
+  @PostMapping("/bulk")
+  public ResponseEntity<List<Activity>> performBulkCountryOperation(@RequestBody List<Activity> activities) {
+    List<Activity> createdActivities = activityService.performBulkActivityOperation(activities);
+    return ResponseEntity.ok(createdActivities);
   }
 }

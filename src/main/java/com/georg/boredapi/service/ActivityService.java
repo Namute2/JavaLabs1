@@ -7,6 +7,8 @@ import com.georg.boredapi.repository.ActivityRepository;
 import com.georg.boredapi.repository.SourceRepository;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -109,5 +111,11 @@ public class ActivityService {
    */
   public List<Activity> getActivitiesBySourceLink(String sourceLink) {
     return activityRepository.findBySourceLink(sourceLink);
+  }
+
+  public List<Activity> performBulkActivityOperation(List<Activity> activities) {
+    return activities.stream()
+            .map(this::addActivity)
+            .collect(Collectors.toList());
   }
 }

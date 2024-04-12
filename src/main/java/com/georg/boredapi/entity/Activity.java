@@ -44,7 +44,7 @@ public class Activity {
       return false;
     }
     Activity activity = (Activity) o;
-    return name.equals(activity.name);
+    return Objects.equals(id, activity.id) && Objects.equals(name, activity.name);
   }
 
   @Override
