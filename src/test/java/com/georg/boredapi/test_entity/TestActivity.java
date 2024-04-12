@@ -49,5 +49,5 @@ class TestActivity {
 
         assertEquals(name, activity.getName());
     }
-    
+
 }
