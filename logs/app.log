@@ -121,3 +121,28 @@ Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140) ~[spring-beans-6.1.4.jar:6.1.4]
 	... 36 common frames omitted
 
+2024-04-13 01:46:00.480  INFO 25592 --- [           main] c.georg.boredapi.ActivityApiApplication  : Starting ActivityApiApplication using Java 21.0.2 with PID 25592 (D:\JavaLabs\activityApi\target\classes started by nikge in D:\JavaLabs\activityApi)
+2024-04-13 01:46:00.482  INFO 25592 --- [           main] c.georg.boredapi.ActivityApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-04-13 01:46:01.016  INFO 25592 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-13 01:46:01.053  INFO 25592 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2024-04-13 01:46:01.476  INFO 25592 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-13 01:46:01.483  INFO 25592 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-13 01:46:01.484  INFO 25592 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-13 01:46:01.528  INFO 25592 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-13 01:46:01.528  INFO 25592 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1012 ms
+2024-04-13 01:46:01.633  INFO 25592 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-13 01:46:01.665  INFO 25592 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-13 01:46:01.688  INFO 25592 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-13 01:46:01.817  INFO 25592 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-13 01:46:01.831  INFO 25592 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-13 01:46:02.042  INFO 25592 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b5798c2
+2024-04-13 01:46:02.044  INFO 25592 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-13 01:46:02.580  INFO 25592 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-13 01:46:02.621  INFO 25592 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-13 01:46:02.840  INFO 25592 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-13 01:46:03.279  WARN 25592 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-13 01:46:03.675  INFO 25592 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-13 01:46:03.682  INFO 25592 --- [           main] c.georg.boredapi.ActivityApiApplication  : Started ActivityApiApplication in 3.489 seconds (process running for 3.963)
+2024-04-13 01:46:09.861  INFO 25592 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-13 01:46:09.863  INFO 25592 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-13 01:46:09.868  INFO 25592 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
