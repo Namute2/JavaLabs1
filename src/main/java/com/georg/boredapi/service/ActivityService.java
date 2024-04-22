@@ -2,7 +2,6 @@ package com.georg.boredapi.service;
 
 import com.georg.boredapi.cache.MyCache;
 import com.georg.boredapi.entity.Activity;
-import com.georg.boredapi.entity.SourceLink;
 import com.georg.boredapi.repository.ActivityRepository;
 import com.georg.boredapi.repository.SourceRepository;
 import java.util.List;
@@ -42,10 +41,10 @@ public class ActivityService {
    */
   public Activity addActivity(Activity activity) {
     Activity savedActivity = activityRepository.save(activity);
-    for (SourceLink sourceLink : activity.getSourceList()) {
+    activity.getSourceList().forEach(sourceLink -> {
       sourceLink.setActivity(savedActivity);
       sourceRepository.save(sourceLink);
-    }
+    });
     return savedActivity;
   }
 
@@ -112,6 +111,11 @@ public class ActivityService {
     return activityRepository.findBySourceLink(sourceLink);
   }
 
+  /**
+   * Add bulk activity..
+   *
+   * @return list of activities
+   */
   public List<Activity> performBulkActivityOperation(List<Activity> activities) {
     return activities.stream()
             .map(this::addActivity)
